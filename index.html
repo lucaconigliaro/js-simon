@@ -11,53 +11,60 @@
     integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
     crossorigin='anonymous' />
 </head>
-<!-- Countdown e bottone di inizio -->
-<div class="d-flex vh-100 w-50 m-auto text-center justify-content-center align-items-center text-align-center">
-  <div id="div">
-    <h1 id="countdown"></h1>
-    <p>Memorizza i numeri, hai 30 secondi</p>
-    <button id="start-button" class="btn btn-primary mb-4">Inizia</button>
-    <div id="numbers" class="d-flex justify-content-center"></div>
-  </div>
+<main>
+  <div class="container">
+    <!-- Countdown e bottone di inizio -->
+    <div class="d-flex vh-100 w-50 m-auto text-center justify-content-center align-items-center text-align-center">
+      <div id="div">
+        <h1 id="countdown"></h1>
+        <p>Memorizza i numeri, hai 30 secondi</p>
+        <button id="start-button" class="btn btn-primary mb-4">Inizia</button>
+        <div id="numbers" class="d-flex justify-content-center"></div>
+      </div>
 
-  <!-- Form dove si inseriranno i numeri ricordati -->
-  <div id="form" class="d-none">
-    <div>
-      <h2>Inserisci i numeri che hai appena visto</h2>
+      <!-- Form dove si inseriranno i numeri ricordati -->
+      <div id="form" class="d-none">
+        <div>
+          <h2>Inserisci i numeri che hai appena visto</h2>
+        </div>
+
+        <form action="" id="user-numbers">
+          <div class="row row-cols-1 row-cols-md-5">
+            <div class="col pt-2">
+              <input id="num1" class="form-control" type="number">
+            </div>
+
+            <div class="col pt-2">
+              <input id="num2" class="form-control" type="number">
+            </div>
+
+            <div class="col pt-2">
+              <input id="num3" class="form-control" type="number">
+            </div>
+
+            <div class="col pt-2">
+              <input id="num4" class="form-control" type="number">
+            </div>
+
+            <div class="col pt-2">
+              <input id="num5" class="form-control" type="number">
+            </div>
+
+          </div>
+
+          <!-- Bottoni di conferma e riprova-->
+          <div class="col-12 pt-4 d-flex justify-content-center column-gap-3">
+            <button id="submit-button" type="submit" class="btn btn-primary mt-5">Conferma</button>
+            <button id="retry-button" type="submit" class="btn btn-outline-danger mt-5">Riprova</button>
+          </div>
+        </form>
+
+        <!-- Risultato -->
+        <h3 id="result" class="d-none text-center pt-3"></h3>
+      </div>
     </div>
-
-    <form action="" id="user-numbers">
-      <div class="row row-cols-1 row-cols-md-5">
-        <div class="col pt-2">
-          <input class="form-control w-50" type="number">
-        </div>
-
-        <div class="col pt-2">
-          <input class="form-control w-50" type="number">
-        </div>
-
-        <div class="col pt-2">
-          <input class="form-control w-50" type="number">
-        </div>
-
-        <div class="col pt-2">
-          <input class="form-control w-50" type="number">
-        </div>
-
-        <div class="col pt-2">
-          <input class="form-control w-50" type="number">
-        </div>
-
-      </div>
-
-      <!-- Bottone di conferma -->
-      <div>
-        <button id="submit-button" type="submit" class="btn btn-primary mt-5">Conferma</button>
-      </div>
-    </form>
   </div>
-</div>
-
+</main>
 
 
 <!-- Script -->
